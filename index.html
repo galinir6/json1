@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body style="background-color: rgb(66, 64, 64);">
+
+    <style>
+        body {
+
+            align-items: center;
+            text-align: center;
+            padding: 5%;
+        }
+    </style>
+
+
+
+    <div style="text-align: center;">
+        <h1 style="color: rgb(217, 255, 0);">My garage</h1>
+    </div>
+
+    <div style="color: rgb(217, 255, 0);">
+
+        Model Year: <input id="model">
+        Color: <input id="color">
+        Manufacturer: <input id="brand">
+
+    </div>
+
+    <button onclick="addCar()">Add car</button>
+    <button onclick="cars = []">Clear</button>
+    <button onclick="deleteLastCar()">Delete last car</button><br>
+
+    <input id="removeSpec">
+    <button onclick="deleteSpecific()">Remove specific car</button>
+
+
+    <script>
+
+        let cars = []
+
+        function addCar() {
+
+            cars.push({ "Model": model.value, "Color": color.value, "Brand": brand.value })
+            console.log(cars);
+
+        }
+
+        function deleteLastCar() {
+
+            cars.pop()
+            console.log(cars);
+        }
+
+        function deleteSpecific() {
+
+            cars.splice(removeSpec.value, 1)
+
+            console.log(cars);
+
+        }
+
+
+    </script>
+<br><br>
+
+
+
+
+<img src="car5.webp" width="500">  <img src="car2.webp" width="500">  <img src="car3.webp" width="500">
+
+
+
+</body>
+
+</html>
